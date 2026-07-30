@@ -13,7 +13,7 @@ O projeto implementa um pipeline completo de Machine Learning: exploração do d
 </p>
 
 <p align="left">
-  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square" alt="status"/>
+  <img src="https://img.shields.io/badge/status-%20Fechado ( Mas pode melhorar )-yellow?style=flat-square" alt="status"/>
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="license"/>
   <img src="https://img.shields.io/github/last-commit/Vagnerkrg/medical-fracture-detection-ai?style=flat-square" alt="last commit"/>
   <img src="https://img.shields.io/github/languages/top/Vagnerkrg/medical-fracture-detection-ai?style=flat-square" alt="top language"/>
