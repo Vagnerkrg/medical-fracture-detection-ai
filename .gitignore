@@ -18,6 +18,11 @@ models/*.pt
 models/*.pth
 models/*.h5
 
+# YOLO Weights
+*.pt
+*.pth
+*.onnx
+
 # IDE
 .vscode/
 
