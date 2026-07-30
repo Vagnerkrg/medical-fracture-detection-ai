@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from ultralytics import YOLO
 
 from src.training.config import TrainingConfig
@@ -17,35 +15,8 @@ class YOLOTrainer:
     ):
         self.config = config
 
-        self._validate_environment()
-
         self.model = YOLO(
             self.config.model_name
-        )
-
-
-    def _validate_environment(self):
-        """
-        Validate training requirements.
-        """
-
-        dataset_yaml = (
-            self.config.get_dataset_yaml()
-        )
-
-        if not dataset_yaml.exists():
-            raise FileNotFoundError(
-                f"Dataset yaml not found: {dataset_yaml}"
-            )
-
-
-        output_dir = (
-            self.config.get_output_dir()
-        )
-
-        output_dir.mkdir(
-            parents=True,
-            exist_ok=True
         )
 
 
@@ -53,19 +24,6 @@ class YOLOTrainer:
         """
         Execute YOLO training.
         """
-
-        print(
-            "Starting YOLO training..."
-        )
-
-        print(
-            f"Model: {self.config.model_name}"
-        )
-
-        print(
-            f"Device: {self.config.device}"
-        )
-
 
         results = self.model.train(
 
@@ -82,19 +40,13 @@ class YOLOTrainer:
             device=self.config.device,
 
             project=str(
-                self.config.project_dir
+                self.config.project_dir.parent
             ),
 
-            name=self.config.experiment_name,
+            name=self.config.project_dir.name,
 
             exist_ok=True
 
         )
-
-
-        print(
-            "Training completed."
-        )
-
 
         return results
