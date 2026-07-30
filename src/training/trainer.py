@@ -40,10 +40,10 @@ class YOLOTrainer:
             device=self.config.device,
 
             project=str(
-                self.config.project_dir.parent
+                self.config.project_dir.resolve()
             ),
 
-            name=self.config.project_dir.name,
+            name="",
 
             exist_ok=True
 
