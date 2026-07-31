@@ -8,7 +8,7 @@ class TrainingAnalyzer:
 
     def __init__(
         self,
-        experiment_path="models/runs/train"
+        experiment_path="models/runs/fracture_detection_baseline"
     ):
         self.experiment_path = Path(
             experiment_path

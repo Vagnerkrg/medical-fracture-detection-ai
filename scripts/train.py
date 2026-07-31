@@ -28,7 +28,7 @@ def train_model():
         imgsz=640,
         batch=16,
         project=str(ROOT_DIR / "models" / "runs"),
-        name="train",
+        name="fracture_detection_baseline",
         exist_ok=True,
     )
 
