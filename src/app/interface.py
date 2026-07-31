@@ -5,7 +5,7 @@ from ultralytics import YOLO
 
 
 MODEL_PATH = Path(
-    "models/runs/train/weights/best.pt"
+    "models/runs/fracture_detection_baseline/weights/best.pt"
 )
 
 
