@@ -29,3 +29,12 @@ Thumbs.db
 # YOLO Training Artifacts
 runs/
 *.cache
+
+# ==========================
+# Medical Dataset
+# ==========================
+
+data/raw/
+data/extracted/
+data/processed/
+data/samples/

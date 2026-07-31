@@ -127,9 +127,25 @@ python scripts/train.py
 
 ### 4. Avaliação
 
-Resultados gerados em `models/runs/train/`, incluindo pesos, métricas, gráficos de treinamento e resultados de validação.
+R## 📊 Resultados do Modelo
 
-Modelo final: `models/runs/train/weights/best.pt`
+Modelo treinado:
+YOLO11n
+
+Configuração:
+- Epochs: 50
+- Image Size: 640
+- Batch Size: 16
+- GPU: NVIDIA RTX 4060
+
+Métricas:
+
+| Métrica | Resultado |
+|---|---:|
+| Precision | 95.0% |
+| Recall | 80.4% |
+| mAP50 | 90.1% |
+| mAP50-95 | 48.1% |
 
 ### 5. Explainability
 

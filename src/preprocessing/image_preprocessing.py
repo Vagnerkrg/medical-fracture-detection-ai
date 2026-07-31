@@ -22,11 +22,11 @@ class ImagePreprocessing:
         Return image dimensions.
         """
 
-        image = Image.open(
+        with Image.open(
             image_path
-        )
+        ) as image:
 
-        width, height = image.size
+            width, height = image.size
 
         return {
             "width": width,
@@ -43,15 +43,17 @@ class ImagePreprocessing:
         to range 0-1.
         """
 
-        image = Image.open(
+        with Image.open(
             image_path
-        ).convert(
-            "L"
-        )
+        ) as image:
 
-        image_array = np.array(
-            image
-        )
+            image = image.convert(
+                "L"
+            )
+
+            image_array = np.array(
+                image
+            )
 
         return (
             image_array / 255.0
@@ -67,19 +69,23 @@ class ImagePreprocessing:
         Prepare image for model input.
         """
 
-        image = Image.open(
+        with Image.open(
             image_path
-        ).convert(
-            "L"
-        )
+        ) as image:
 
-        image = image.resize(
-            size
-        )
+            image = image.convert(
+                "L"
+            )
 
-        return np.array(
-            image
-        )
+            image = image.resize(
+                size
+            )
+
+            image_array = np.array(
+                image
+            )
+
+        return image_array
 
 
     def validate_yolo_annotation(
